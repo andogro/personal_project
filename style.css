@@ -1,0 +1,165 @@
+body {
+background-color: #FFF;
+font-family: 'Lora', serif; font-weight: 400;
+}
+
+#container {
+  margin: 20px;
+  width: 1300px;
+}
+
+#header {
+  background-color: #41A317;
+}
+
+ /* Recipe Input - left hand side  */
+
+#recipe_input {
+width: 475px;
+float: left;
+margin-top: 25px;
+}
+
+.recipeTitle {
+  width: 400px;
+}
+
+#recipe_input .recipeFull {
+  height: 400px;
+  width: 400px;
+  display: block;
+  vertical-align: top;
+}
+
+.recipe_check {
+ border: 1px solid #555;
+ margin-bottom: 10px;
+ width: 380px;
+ padding: 10px;
+}
+
+ /* Middle Area */
+
+#veganate {
+float: left;
+width: 200px;
+margin-top: 70px;
+text-align: center;
+}
+
+.vegan_image {
+ border: 2px solid;
+ width: 200px;
+}
+
+.below_veganate {
+  margin-top: 20px;
+  width: 200px;
+}
+
+ /* Recipe Output */
+
+#recipe_output {
+width: 475px;
+margin-left: 75px;
+float: left;
+}
+
+.new_recipe_full {
+}
+
+ /* Change backgrounds of vegan replacements */
+
+.eggs {
+      color:#222;
+      background:#E7FF41;
+}
+.cheese {
+      color:#fff;
+      background:#FFC441;
+}
+.milk {
+      color:#444;
+      background:whitesmoke;
+}
+.bacon {
+      color:#fff;
+      background:#ff4141;
+}
+.ground {
+      color:#fff;
+      background:#B741FF;
+}
+.beef {
+      color:#fff;
+      background:#FF41A4;
+}
+.chicken {
+      color:#fff;
+      background:#FA41FF;
+}
+.cream {
+      color:#fff;
+      background:#4E41FF;
+}
+.butter {
+      color:#fff;
+      background:#41DAFF;
+}
+.tuna {
+      color:#fff;
+      background:#41FFC7;
+}
+.fish {
+      color:#fff;
+      background:#FF41A4;
+}
+.pork {
+      color:#fff;
+      background:#FA41FF;
+}
+.sausage {
+      color:#fff;
+      background:#B741FF;
+}
+.honey {
+      color:#fff;
+      background:#41FF5E;
+}
+
+ /* Changing the float position/color of the vegan replacements */
+
+#hover-info {
+float: right;
+}
+
+.on-click-eggs {
+  position: absolute;
+  top: 120px;
+  left: 650px;
+  width: 200px;
+  height: 200px;
+  background-color: #E7FF41;
+  padding: 10px;
+  border-radius: 10px;
+}
+.on-click-cheese {
+  position: absolute;
+  top: 120px;
+  left: 700px;
+  width: 200px;
+  height: 200px;
+  background-color: #FFC441;
+  padding: 10px;
+  border-radius: 10px;
+}
+.on-click-milk {
+  position: absolute;
+  top: 120px;
+  left: 750px;
+  width: 200px;
+  height: 200px;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">-->
+    <meta charset="utf-8">
+    <title>The Veganator</title>
+  </head>
+  <body>
+<div id ="container">
+  <div id = "header"><img src ="images/header.png"></img></div>
+  <div id = "recipe_input">
+
+    <label for="original_recipe_title">Recipe Title:</label><br />
+    <input class="recipeTitle" id="original_recipe_title" type="text" placeholder="Recipe Title"></input><br /><br />
+    <label for="original_recipe">Enter Your Recipe:</label><br />
+    <textarea class="recipeFull" name="recipeText" id="original_recipe" placeholder="Copy and Paste your Recipe here"></textarea>
+    <form class ="recipe_check">
+    <input type="checkbox" name="half_check" value="half">I want to half the recipe
+    </form>
+  </div>
+
+    <div id="veganate">
+     <img src ="images/carrot.png" alt ="Veganate Me!"></img>
+     <div class = "below_veganate"></div>
+    </div>
+
+  <div id= "recipe_output">
+    <br />
+    <div class ="new_recipe_title"></div>
+    <div class = "new_recipe_full"></div>
+  </div>
+  <div id = "click-info">
+    <div class="on-click-eggs">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris malesuada turpis metus, vitae fermentum mauris imperdiet ut. Suspendisse aliquam</p>
+    </div>
+    <div class="on-click-cheese">
+                <p>Here's some cheese please</p>
+    </div>
+    <!-- <div class="on-click-milk">
+                <p>Milk does you good</p>
+    </div> -->
+
+  </div>
+
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>

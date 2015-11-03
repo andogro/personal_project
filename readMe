@@ -1,0 +1,54 @@
+readMe
+--------------------------------------------------------------------------------
+scope
+
+1) Replace all possibilities
+2) Have floats with info and links for certain items
+3) Bring in json query of veggie recipe database to suggest tried and true alternatives
+> 4) bring in random veggie quote?
+// 5) use replace for fractions? Math for others
+7) CSS for some semblance of lookin good
+ - - - - - - - - - - - -  - - --------------------------------------
+issues
+
+> 1) need to hide spans on click
+
+
+
+__________________________-------------------------------------------
+
+
+
+Questions for Caleb:
+
+get rid of code redundancy (right now it's very bloated)
+
+auto image resize based on class?
+
+json?
+
+all things are currently tied to the veganate click function. Would it be better
+to separate more?
+
+defining siblings (ie are all div classes within a div id siblings?) - or should I use a different way to target?
+
+
+ -----------------------------------------------------------------------------------
+
+Replacement info:
+
+cream: For a homemade replacement, blend one-part cashews and one part water until smooth.
+bacon: coconut bacon
+
+ -------------------------------------------------------------------------------------
+
+Ideas to improve:
+
+make css dynamic using math in the the js
+so for hide elements position determined by adding # to top & left
+from previous item in the list, and z index as well.
+Color? could probably save a separate function to use color
+from previous or have colors assigned to variables
+
+make mobile friendly - possibly just one column where you paste in and results
+come right into the box.
