@@ -68,6 +68,13 @@ float: left;
 .new_recipe_full {
 }
 
+.button {
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+  color: red;
+}
+
  /* Change backgrounds of vegan replacements */
 
 .eggs {

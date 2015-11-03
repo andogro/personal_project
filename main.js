@@ -14,7 +14,7 @@ var images = ['vegan_1.jpg', 'vegan_2.jpg', 'vegan_3.jpg', 'vegan_4.jpg',
       return false; // Need to reroute to beginning, stop function
     };
     // Replace various ingredients
-    var recipeTransform = veganRecipe.replace(/EGGS/g, '<span class="eggs">FLAX EGGS</span>')
+    var recipeTransform = veganRecipe.replace(/EGGS|EGG/g, '<span class="eggs">FLAX EGGS</span>')
     .replace(/MILK/g, '<span class="milk">ALMOND MILK</span>')
     .replace(/CHEESE/g, '<span class="cheese">VEGAN CHEESE</span>')
     .replace(/BACON/g, '<span class="bacon">COCONUT BACON</span>')
@@ -29,22 +29,7 @@ var images = ['vegan_1.jpg', 'vegan_2.jpg', 'vegan_3.jpg', 'vegan_4.jpg',
     .replace(/SAUSAGE/g, '<span class="sausage">VEGAN SAUSAGE</span>')
     .replace(/HONEY/g, '<span class="honey">AGAVE NECTAR</span>');
 
-
-    $("div.on-click-eggs").hide();
-    $("div.on-click-cheese").hide();
-    $("div.on-click-milk").hide();
-    $("div.on-click-bacon").hide();
-    $("div.on-click-ground").hide();
-    $("div.on-click-beef").hide();
-    $("div.on-click-chicken").hide();
-    $("div.on-click-cream").hide();
-    $("div.on-click-butter").hide();
-    $("div.on-click-tuna").hide();
-    $("div.on-click-fish").hide();
-    $("div.on-click-pork").hide();
-    $("div.on-click-sausage").hide();
-    $("div.on-click-honey").hide();
-
+    $("#click-info").children().hide();
 
     $(".new_recipe_title").empty();                      // Empty new content area, so a new recipe is not added below
     $(".new_recipe_full").empty();                       //
@@ -52,25 +37,12 @@ var images = ['vegan_1.jpg', 'vegan_2.jpg', 'vegan_3.jpg', 'vegan_4.jpg',
     $("<br />" +recipeTransform+ "<br />").appendTo(".new_recipe_full");
     $(this).effect('bounce', {times:3}, 1000);
     $(".below_veganate").empty();                       // Empty out image so it is not additive.
-    $('<img src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('.below_veganate');
+    $('<img src="images/' + images[Math.floor(Math.random() * images.length)] + '">').attr('width','200').appendTo('.below_veganate');
   });
 
-// Hide the divs that hold extra
+//Hide the divs that hold extra when
 
-$("div.on-click-eggs").hide();
-$("div.on-click-cheese").hide();
-$("div.on-click-milk").hide();
-$("div.on-click-bacon").hide();
-$("div.on-click-ground").hide();
-$("div.on-click-beef").hide();
-$("div.on-click-chicken").hide();
-$("div.on-click-cream").hide();
-$("div.on-click-butter").hide();
-$("div.on-click-tuna").hide();
-$("div.on-click-fish").hide();
-$("div.on-click-pork").hide();
-$("div.on-click-sausage").hide();
-$("div.on-click-honey").hide();
+$("#click-info").children().hide();
 
 //toggle function to show class on click, and set z index
 
@@ -130,19 +102,25 @@ $("body").on('click', ".honey", function(){
     $(".on-hover-honey").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
 });
 
-$.ajax({
-  url: 'https://api.myjson.com/bins/20gec',
-  type: 'GET',
-  data: {
-    format: 'json'
-  },
-  error: function(){
-    alert('An error has occurred');
-  },
-  success: function(results){
-    console.log(results.data);
-   $( ".container" ).append( "<p>Colorado's Bird Is:</p>" + results.data[1].symbols[0].bird);
-  }
-});
+
+
+        function getRecipeJson() {
+            var apiKey = "dvxeuuxV9MZ5Xe7ywNeS3oT5zL0747x3";
+            var recipeTitle = $(".recipeTitle").val();
+            var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
+                  + recipeTitle  + "&api_key="+apiKey;
+            $.ajax({
+                    type: "GET",
+                    dataType: 'json',
+                    cache: false,
+                    url: url,
+                    success: function (data) {
+                    alert('success');
+                    console.log(data);
+                    }
+                });
+        }
+
+$(".button").click().getRecipeJson();
 
 });
