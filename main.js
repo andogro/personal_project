@@ -34,7 +34,7 @@ var images = ['vegan_1.jpg', 'vegan_2.jpg', 'vegan_3.jpg', 'vegan_4.jpg',
 
     $(".new_recipe_title").empty();                      // Empty new content area, so a new recipe is not added below
     $(".new_recipe_full").empty();                       //
-    $("<h2>" +veganTitle+ " Veganated</h2><br />Click on an item to find recipes and resources on vegan replacements.<br /><br />").appendTo(".new_recipe_title");
+    $("<h2>" +veganTitle+ " Veganated</h2><br />Click on an item to find recipes and resources on vegan replacements. Boxes are movealbe and clicking on a box will move those contents to the forefront.<br /><br />").appendTo(".new_recipe_title");
     $("<br />" +recipeTransform+ "<br />").appendTo(".new_recipe_full");
     $(this).effect('bounce', {times:3}, 1000);
     $(".below_veganate").empty();                       // Empty out image so it is not additive.
