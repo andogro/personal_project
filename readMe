@@ -32,16 +32,7 @@ to separate more?
 
 defining siblings (ie are all div classes within a div id siblings?) - or should I use a different way to target?
 
-
- -----------------------------------------------------------------------------------
-
-Replacement info:
-
-cream: For a homemade replacement, blend one-part cashews and one part water until smooth.
-bacon: coconut bacon
-
- -------------------------------------------------------------------------------------
-
+__--------------------------------------------------------------------------------------------------
 Ideas to improve:
 
 make css dynamic using math in the the js

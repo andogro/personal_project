@@ -19,15 +19,16 @@ var images = ['vegan_1.jpg', 'vegan_2.jpg', 'vegan_3.jpg', 'vegan_4.jpg',
     .replace(/CHEESE/g, '<span class="cheese">VEGAN CHEESE</span>')
     .replace(/BACON/g, '<span class="bacon">COCONUT BACON</span>')
     .replace(/GROUND BEEF/g, '<span class="ground">VEGAN CRUMBLES</span>')
-    .replace(/BEEF|STEAK/g, '<span class="beef">VEGAN BEEF</span>')
+    .replace(/BEEF|STEAK|STEAKS/g, '<span class="beef">VEGAN BEEF</span>')
     .replace(/CHICKEN/g, '<span class="chicken">VEGAN CHICKEN</span>')
     .replace(/CREAM/g, '<span class="cream">CASHEW CREAM</span>')
     .replace(/BUTTER/g, '<span class="butter">COCONUT OIL</span>')
-    .replace(/TUNA FISH/g, '<span class="tuna">VEGAN TUNA</span>')
-    .replace(/SALMON|FISH|TROUT|ROUGHY|BASS/g, '<span class="fish">VEGAN FISH</span>')
-    .replace(/PORK/g, '<span class="pork">VEGAN PORK</span>')
-    .replace(/SAUSAGE/g, '<span class="sausage">VEGAN SAUSAGE</span>')
-    .replace(/HONEY/g, '<span class="honey">AGAVE NECTAR</span>');
+    .replace(/TUNA FISH|TUNA/g, '<span class="tuna">VEGAN TUNA</span>')
+    .replace(/SALMON|FISH|TROUT|ROUGHY|BASS|SHRIMP|SEAFOOD|CLAMS|MUSSELS/g, '<span class="fish">VEGAN FISH</span>')
+    .replace(/PORK/g, '<span class="pork">JACKFRUIT</span>')
+    .replace(/SAUSAGE|SAUSAGES/g, '<span class="sausage">VEGAN SAUSAGE</span>')
+    .replace(/HONEY/g, '<span class="honey">AGAVE NECTAR</span>')
+    .replace(/MAYO|MAYONNAISE|MAYONAISE/g, '<span class="mayo">NAYONAISE</span>');
 
     $("#click-info").children().hide();
 
@@ -40,87 +41,111 @@ var images = ['vegan_1.jpg', 'vegan_2.jpg', 'vegan_3.jpg', 'vegan_4.jpg',
     $('<img src="images/' + images[Math.floor(Math.random() * images.length)] + '">').attr('width','200').appendTo('.below_veganate');
   });
 
-//Hide the divs that hold extra when
 
+//Close a div using the X on the side
+
+$(".close").click(function() {
+$(this).parent().fadeToggle('slow', 'linear');
+});
+
+//Hide the divs that hold extra when page is reset
 $("#click-info").children().hide();
 
-//toggle function to show class on click, and set z index
+//toggle function to show class on click, set z index, make draggable
 
 $("body").on('click', ".eggs", function(){
-    $(".on-click-eggs").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css("z-index", "999").siblings().css("z-index", "0");
+    $(".eggsinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "400px",
+      "background-color": "#E7FF41"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".cheese", function(){
-    $(".on-click-cheese").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css("z-index", "999").siblings().css("z-index", "0");
+    $(".cheeseinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "450px",
+      "background-color": "#FFC441"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".milk", function(){
-    $(".on-click-milk").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".milkinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "500px",
+      "background-color": "whitesmoke"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".bacon", function(){
-    $(".on-hover-bacon").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".baconinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "550px",
+      "background-color": "#ff4141"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".ground", function(){
-    $(".on-hover-ground").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".groundinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "600px",
+      "background-color": "#B741FF"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".beef", function(){
-    $(".on-hover-beef").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".beefinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "650px",
+      "background-color": "#FF41A4"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".chicken", function(){
-    $(".on-hover-chicken").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".chickeninfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "700px",
+      "background-color": "#FA41FF"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".cream", function(){
-    $(".on-hover-cream").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".creaminfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "750px",
+      "background-color": "#4E41FF"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".butter", function(){
-    $(".on-hover-butter").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".butterinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "800px",
+      "background-color": "#41DAFF"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".tuna", function(){
-    $(".on-hover-tuna").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".tunainfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "850px",
+      "background-color": "#41FFC7"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".fish", function(){
-    $(".on-hover-fish").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".fishinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "900px",
+      "background-color": "#FF41A4"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".pork", function(){
-    $(".on-hover-pork").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".porkinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "`950px",
+      "background-color": "#FA41FF"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".sausage", function(){
-    $(".on-hover-sausage").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".sausageinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "1000px",
+      "background-color": "#B741FF"}).siblings().css("z-index", "0");
 });
 
 $("body").on('click', ".honey", function(){
-    $(".on-hover-honey").fadeToggle('slow', 'linear').css("z-index", "999").siblings().css("z-index", "0");
+    $(".honeyinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "1050px",
+      "background-color": "#41FF5E"}).siblings().css("z-index", "0");
+});
+
+$("body").on('click', ".mayo", function(){
+    $(".mayoinfo").fadeToggle('slow', 'linear').draggable({stack: "div",distance: 0}).css({"z-index" :"999", "left" : "1100px",
+      "background-color": "whitesmoke"}).siblings().css("z-index", "0");
 });
 
 
+        // function getRecipeJson() {
+        //     var apiKey = "dvxeuuxV9MZ5Xe7ywNeS3oT5zL0747x3";
+        //     var recipeTitle = $(".recipeTitle").val();
+        //     var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
+        //           + recipeTitle  + "&api_key="+apiKey;
+        //     $.ajax({
+        //             type: "GET",
+        //             dataType: 'json',
+        //             cache: false,
+        //             url: url,
+        //             success: function (data) {
+        //             alert('success');
+        //             console.log(data);
+        //             }
+        //         });
+        // }
 
-        function getRecipeJson() {
-            var apiKey = "dvxeuuxV9MZ5Xe7ywNeS3oT5zL0747x3";
-            var recipeTitle = $(".recipeTitle").val();
-            var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
-                  + recipeTitle  + "&api_key="+apiKey;
-            $.ajax({
-                    type: "GET",
-                    dataType: 'json',
-                    cache: false,
-                    url: url,
-                    success: function (data) {
-                    alert('success');
-                    console.log(data);
-                    }
-                });
-        }
-
-$(".button").click().getRecipeJson();
+//$(".button").click().getRecipeJson();
 
 });

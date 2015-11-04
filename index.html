@@ -18,9 +18,9 @@
     <input class="recipeTitle" id="original_recipe_title" type="text" placeholder="Recipe Title"></input><br /><br />
     <label for="original_recipe">Enter Your Recipe:</label><br />
     <textarea class="recipeFull" name="recipeText" id="original_recipe" placeholder="Copy and Paste your Recipe here"></textarea>
-    <form class ="recipe_check">
+    <!-- <form class ="recipe_check">
     <input type="checkbox" name="half_check" value="half">I want to half the recipe
-    </form>
+    </form> -->
   </div>
 
     <div id="veganate">
@@ -32,22 +32,102 @@
     <br />
     <div class ="new_recipe_title"></div>
     <div class = "new_recipe_full">
-       <div class = "button">
-       </div>
-  </div>
-  <div id = "click-info">
-    <div class="on-click-eggs">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris malesuada turpis metus, vitae fermentum mauris imperdiet ut. Suspendisse aliquam</p>
-    </div>
-    <div class="on-click-cheese">
-                <p>Here's some cheese please</p>
-    </div>
-    <!-- <div class="on-click-milk">
-                <p>Milk does you good</p>
-    </div> -->
+       <div class = "button"></div>
+   </div>
+  <div id ="click-info">
 
+    <div class="infobox eggsinfo">
+      <p class = "close">X</p>
+      <p>Flax Eggs are easy and work great in baking and other egg recipes. If you are making a breakfast dish, try <a href="http://freefromharm.org/food-products/delicious-vegan-eggs-recipes/" target = "blank">tofu eggs</a> or <a href ="http://thevegg.com/" target ="_blank">the Vegg.</a></p>
+      <p>For each flax egg, combine 1 tablespoon of ground flaxseed with 3 tablespoons of water. Stir well, and place in the fridge to set for 15 minutes</p>
+    </div>
+
+    <div class="infobox cheeseinfo">
+      <p class = "close">X</p>
+      <p>For a great cheddar or mozzerella Diaya brand is the best around, and is also soy free!<p>
+      <p> Making your own vegan cheese is certainly an art form, some simple starter
+        cheeses made from nuts and other simple ingredients can be found at <a href = "http://www.onegreenplanet.org/vegan-recipe/raw-vegan-creamy-cheese/" target="_blank">one green planet</a>.
+      </p>
+    </div>
+
+    <div class="infobox milkinfo">
+      <p class = "close">X</p>
+                <p>Almond Milk, Soy Milk, Coconut milk....pick your favorite and go!</p>
+                <p> Use unsweetened for savory dishes and vanilla for
+                desserts or other sweet dishes made with milk</p>
+    </div>
+
+    <div class="infobox baconinfo">
+      <p class = "close">X</p>
+      <p> Coconut Bacon! Oven to 375. Mix together ½ tablespoon liquid smoke, 1 tablespoon Tamari,
+          1 tablespoon maple syrup, ½ tablespoon water. Add 1½ cups unsweetened flaked coconut. Spread out on a pan, sprinkle
+          with paprika and black pepper, and cook for 15-20 mins, stirring every 5.</p>
+    </div>
+
+    <div class="infobox groundinfo">
+      <p class = "close">X</p>
+      <p> My favorite store bought brand is <a href = "https://lightlife.com/products/gimme-lean-beef" target="_blank">Gimme Lean. Boca also makes tasty frozen crumbles.</a></p>
+      <p> For mexican food, try this <a href ="http://cookieandkate.com/2015/quinoa-black-bean-tacos-recipe/" target="_blank">quinoa and black bean filling</a></p>
+    </div>
+
+    <div class="infobox beefinfo">
+      <p class = "close">X</p>
+      <p>Beef can be a hard one to replicate - for shredded try this <a href = "https://evyblihafsaka.wordpress.com/category/vegan-shredded-beef/" target="_blank">jackfruit recipe</a></p>
+      <p>Seitan is typically a good substitute from a texture standpoint. My favorite store bought is from <a href = "http://gardein.com/products/beefless-tips/" target="_blank">Gardein.</a></p>
+    </div>
+
+    <div class="infobox chickeninfo">
+      <p class = "close">X</p>
+       <p><a href = "http://beyondmeat.com/products" target="_blank">Beyond meat</a> has tasty grilled chicken style replacements. Often I will use
+          <a href ="http://www.bocaburger.com/" target="_blank"> Boca</a> chicken patties cut up for chicken recipes.</p>
+    </div>
+
+    <div class="infobox creaminfo">
+      <p class = "close">X</p>
+       <p>Cashew Cream makes an excellent substitute in recipes. Just blend one-part cashews and one part water until smooth.</p>
+    </div>
+
+    <div class="infobox butterinfo">
+      <p class = "close">X</p>
+       <p>Coconut oil softened to room temperature takes care of most baking needs (especially sweet foods)</p>
+       <p>If you're making something savory, try grapeseed oil as a replacement, and use 3/4 of what the recipe recommends. </p>
+    </div>
+
+    <div class="infobox tunainfo">
+      <p class = "close">X</p>
+       <p>Tuna fish salad can be made vegan! Take 1 can mashed garbanzo beans, chop 2 celery stalks, 1/4 red onion, 1/4 cup <a href ="http://www.nasoya.com/products/nayonaise/nayonaise">Nayonaise</a> salt, pepper, seaweed and dried dill to taste.</p>
+       <p>For other tuna recipes, try mashed garbanzo beans mixed with a bit of kelp or seaweed</p>
+      </div>
+
+    <div class="infobox fishinfo">
+    <p class = "close">X</p>
+     <p>Generally fish can be hard to replicate exactly. <a href ="http://gardein.com/products/golden-fishless-filet/" target ="_blank">Gardein</a> makes a good substitute.</p>
+     </div>
+
+  <div class="infobox porkinfo">
+    <p class = "close">X</p>
+     <p>Pulled and <a href ="http://minimalistbaker.com/bbq-jackfruit-sandwiches-with-avocado-slaw/" target ="_blank">Barbeque pork</a> can be made deliciously with jackfruit!</p>
+     <p>But a can of jackfruit in brine and you're on your way to replacing pork!</p>
   </div>
 
+  <div class="infobox sausageinfo">
+    <p class = "close">X</p>
+    <p>There are plenty of great vegan sausages out there - breakfast, brats or crumbles. Gimme Lean makes an excellent ground version,
+    and tofurkey and boca make frozen versions.</p>
+    <p>For those with time and ambition, here is a <a href ="http://www.onegreenplanet.org/plant-based-recipes/how-to-make-homemade-spicy-italian-sausage-vegan-and-gluten-free/" target ="_blank"> tasty, spicy homeade sausage</a></p>
+  </div>
+
+  <div class="infobox honeyinfo">
+  <p class = "close">X</p>
+  <p>Agave nectar can substitute for honey in any recipe. Coconut nectar is another one to try.</p>
+  </div>
+
+  <div class="infobox mayoinfo">
+  <p class = "close">X</p>
+  <p>Storebought versions include nayonaise and veganaise - he taste is remarkably similar to regular mayo. Tahini can also be used in a pinch.</p>
+  <p> If you're feeling ambitious, <a href ="http://www.mnn.com/food/recipes/stories/3-recipes-for-homemade-vegan-mayonnaise" target ="_blank">whip up a homemade batch</a>.</p>
+  </div>
+ </div>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

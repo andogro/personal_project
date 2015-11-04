@@ -133,6 +133,10 @@ float: left;
       color:#fff;
       background:#41FF5E;
 }
+.mayo {
+      color:#222;
+      background:whitesmoke;
+}
 
  /* Changing the float position/color of the vegan replacements */
 
@@ -140,33 +144,17 @@ float: left;
 float: right;
 }
 
-.on-click-eggs {
-  position: absolute;
-  top: 120px;
-  left: 650px;
-  width: 200px;
-  height: 200px;
-  background-color: #E7FF41;
-  padding: 10px;
-  border-radius: 10px;
+.infobox {
+    position: absolute;
+    top: 100px;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
 }
-.on-click-cheese {
+
+.close {
   position: absolute;
-  top: 120px;
-  left: 700px;
-  width: 200px;
-  height: 200px;
-  background-color: #FFC441;
-  padding: 10px;
-  border-radius: 10px;
-}
-.on-click-milk {
-  position: absolute;
-  top: 120px;
-  left: 750px;
-  width: 200px;
-  height: 200px;
-  background-color: whitesmoke;
-  padding: 10px;
-  border-radius: 10px;
+  left: 300px;
+  top: -15px;
 }
